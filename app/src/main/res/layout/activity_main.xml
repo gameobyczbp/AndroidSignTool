@@ -6,6 +6,7 @@
 
     <EditText
         android:id="@+id/apk_pkg_name_filter"
+        android:textSize="14dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/edit_hint" />

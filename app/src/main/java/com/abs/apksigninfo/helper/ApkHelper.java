@@ -65,14 +65,16 @@ public class ApkHelper {
         return result;
     }
 
-    public List<ApkInfo> loadApkInfoByPkgName(String pkgName) {
-        if (TextUtils.isEmpty(pkgName)) {
+    public List<ApkInfo> loadApkInfoByPkgName(String pkgNameOrAppName) {
+        if (TextUtils.isEmpty(pkgNameOrAppName)) {
             return dataSetCache;
         }
-
+        pkgNameOrAppName = pkgNameOrAppName.trim();
         List<ApkInfo> result = new ArrayList<>();
         for (ApkInfo each : dataSetCache) {
-            if (each.pkgName.toLowerCase().contains(pkgName.toLowerCase())) {//忽略大写
+            if (each.pkgName.toLowerCase().contains(pkgNameOrAppName.toLowerCase())) {//先检测包名忽略大写
+                result.add(each);
+            } else if (each.appName.contains(pkgNameOrAppName)) {//检测应用名
                 result.add(each);
             }
         }

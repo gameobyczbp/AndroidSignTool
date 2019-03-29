@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">ApkSignInfo</string>
-    <string name="edit_hint">输入包名进行过滤</string>
+    <string name="edit_hint">输入包名或者应用名进行过滤,支持模糊搜索</string>
 </resources>
