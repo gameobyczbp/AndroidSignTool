@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
 import android.widget.EditText;
 
 import com.abs.apksigninfo.R;
@@ -68,6 +69,11 @@ public class MainActivity extends Activity {
 
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }
 
     class FilterHandler extends Handler {
 
