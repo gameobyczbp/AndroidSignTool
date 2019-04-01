@@ -4,12 +4,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/apk_pkg_name_filter"
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_hint"
-        android:textSize="14dp" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/apk_pkg_name_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_hint"
+            android:paddingRight="30dp"
+            android:textSize="14dp" />
+
+
+        <ImageView
+            android:id="@+id/apk_clear_keyword"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/home_activity_clear_keyword_icon"
+            android:visibility="gone" />
+    </FrameLayout>
 
 
     <android.support.v7.widget.RecyclerView
